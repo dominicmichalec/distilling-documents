@@ -1,0 +1,35 @@
+[
+  {
+    "skills": ["distilling-documents"],
+    "query": "Write an executive one-pager on this document for the Operations Committee.",
+    "files": ["fixtures/cold-chain-assessment.md"],
+    "expected_behavior": [
+      "Reads /skills/distilling-documents/SKILL.md before writing",
+      "States an Assumptions line (audience, decision, length) because no user can be asked",
+      "Uses the corrected Option B figures from Appendix B (3.2 million a year, 6.7 years payback, negative 3.1 million NPV) and says they supersede the section 3 figures",
+      "Follows every factual claim with a verbatim quote that appears in the source",
+      "Labels any claim it cannot quote as inference, or as 'My reading'",
+      "Keeps the headings of ONE-PAGER-TEMPLATE.md in order"
+    ]
+  },
+  {
+    "skills": ["distilling-documents"],
+    "query": "I have five minutes before the meeting. What do I need to know?",
+    "files": ["fixtures/cold-chain-assessment.md"],
+    "expected_behavior": [
+      "Reads SKILL.md even though the prompt does not say 'one-pager' or 'summary'",
+      "Puts the decision requested and the recommendation on the first screen",
+      "Mentions that the recommendation predates the Appendix B correction",
+      "Names at least one thing the source says it has not assessed (planning refusal or customer loss)"
+    ]
+  },
+  {
+    "skills": ["distilling-documents"],
+    "query": "Summarise this email in one sentence: 'Hi Sam, the venue for Thursday has moved to Room 4B because the AV in 2A is broken. Same time, 10:00. Please tell the catering team. Thanks, Priya'",
+    "files": [],
+    "expected_behavior": [
+      "Does NOT read SKILL.md (a short email is a near-miss, listed as an exclusion in the description)",
+      "Answers in one sentence with no template headings"
+    ]
+  }
+]
