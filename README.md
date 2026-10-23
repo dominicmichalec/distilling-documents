@@ -4,6 +4,8 @@ An [Agent Skill](https://platform.claude.com/docs/en/agents-and-tools/agent-skil
 
 It's prose only: a `SKILL.md` and one template, no scripts.
 
+How it was built, tested and versioned: [Teaching Claude to write the one-pager](https://personal-website-blue-psi-99.vercel.app/blog/one-pager-distillation-skill).
+
 ## What it does
 
 1. **Finds out who the page is for.** It asks for the audience, the decision and the length in one message. When nobody can answer (an API call or a batch job), it picks the most plausible answers and states them on an **Assumptions** line at the top instead of guessing silently.
