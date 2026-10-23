@@ -4,7 +4,7 @@ An [Agent Skill](https://platform.claude.com/docs/en/agents-and-tools/agent-skil
 
 It's prose only: a `SKILL.md` and one template, no scripts.
 
-How it was built, tested and versioned: [Teaching Claude to write the one-pager](https://personal-website-blue-psi-99.vercel.app/blog/one-pager-distillation-skill).
+How it was built, tested and versioned: [Teaching Claude to write the one-pager](https://www.dmichalec.com/blog/one-pager-distillation-skill).
 
 ## What it does
 
